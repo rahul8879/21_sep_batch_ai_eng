@@ -130,5 +130,14 @@ data = {"item1":"Tshirt",
         },
         "rahul" : [1, 2, 3]
 }
-print(data[2]["description"])
+
+data = {"a": 1, "b": 2, "c": 3}
+
+data['a'] = -1
+data['d'] = 4
+print(data.values())
 # https://docs.python.org/3/c-api/dict.html
+
+# for i in data.values():
+#     if i == -1:
+#         print("Found:", i)
