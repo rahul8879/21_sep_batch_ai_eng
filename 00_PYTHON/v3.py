@@ -21,3 +21,11 @@ print(cond_batc)
 final_df = df[cond_batc | cond_batc_2]
 print(final_df)
 # https://pandas.pydata.org/docs/getting_started/index.html
+url = (
+    "https://raw.githubusercontent.com/pandas-dev"
+    "/pandas/main/pandas/tests/io/data/csv/tips.csv"
+)
+
+
+tips = pd.read_csv(url)
+tips.to_csv("tips.csv", index=False)
