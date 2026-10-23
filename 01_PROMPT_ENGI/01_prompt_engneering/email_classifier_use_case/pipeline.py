@@ -13,12 +13,6 @@ def is_enterprise_customer(sender):
     return False
 
 
-# here email is a dict
-email = {
-    "subject": "Login issue",
-    "body": "I'm unable to log into my account. I paid but not sure payment done or not. please cancel my subscription.",
-    "sender": "user@enterprise.com"
-}
 
 def process_email(email):
     # step 1    : classify the email using COT
@@ -62,4 +56,25 @@ def process_email(email):
 
 
 # print(is_enterprise_customer(email['sender']))
-print(process_email(email))
+
+# here email is a dict
+emails = [{
+    "subject": "Login issue",
+    "body": "I'm unable to log into my account. I paid but not sure payment done or not.",
+    "sender": "user@enterprise.com"
+},
+{
+    "subject": "Feature request",
+    "body": "I'd like to request a new feature for the product.",
+    "sender": "user@bigclient.com"
+},
+{
+    "subject": "Account cancellation",
+    "body": "I want to cancel my account.",
+    "sender": "user@enterprise.com"
+}
+]
+
+
+for email in emails:
+    print(process_email(email))
