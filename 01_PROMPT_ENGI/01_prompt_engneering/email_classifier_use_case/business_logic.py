@@ -60,10 +60,53 @@ def classify_with_cot(subject,body,sender):
         "urgency": urgency
     }
 
-# dummy email
+from collections import Counter
 
-subject = "Meeting Reminder"
-body = "Don't forget about the meeting tomorrow at 10 AM."
-sender = "john.doe@example.com"
+def classify_with_self_consistency(subject,body,sender,n_runs = 5):
+    template = load_prompt("classify_cot.md")
+    prompt = template.format(subject=subject,body=body,sender=sender)
+    results = []
 
-print(classify_with_cot(subject, body, sender))
+    for i in range(n_runs):
+        result = call_llm(prompt)
+        for line in result.split('\n'):
+            if "CATEGORY" in line:
+                category =line.split(":")[1].strip()
+                results.append(category)
+
+    votes = Counter(results)
+    winner = votes.most_common(1)[0][0]
+    confidence = votes.most_common(1)[0][1] / n_runs
+
+    urgency = None
+    for line in result.split('\n'):
+        if "URGENCY" in line:
+            urgency = line.split(":")[1].strip()
+
+    return  {
+        "category": winner,
+        "confidence": confidence,
+        "urgency": urgency
+    }
+
+
+
+def draft_response_with_tot(subject,body,category):
+    template = load_prompt("tree_of_thought.md")
+
+    prompt = template.format(subject=subject, body=body, category=category)
+
+    result = call_llm(prompt)
+
+    return result
+
+# subject="Login issue"
+# body = "I'm unable to log into my account. I paid but not sure payment done or not"
+# sender = "user@example.com"
+# classification = 'Billing'
+
+# print(draft_response_with_tot(subject,body,classification))
+# print(classify_with_self_consistency(subject,body,sender,n_runs = 5))
+
+
+# print(Counter(result))
