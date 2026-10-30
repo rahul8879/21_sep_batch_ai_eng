@@ -23,13 +23,13 @@ A seller selling phone accessories on Flipkart gets 1000+ reviews per day.
 - No trend visibility — are complaints about the charging cable increasing or decreasing?
 - No time to reply to negative reviews individually
 
-**Your task:** Replace this manual process with an automated LangChain pipeline.
+**Your task:** Replace this manual process with an automated python pipeline.
 
 ---
 
 ## What You Will Build
 
-A Python script or Jupyter notebook that takes a list of customer reviews and produces structured analysis for each one.
+A Python script or  notebook that takes a list of customer reviews and produces structured analysis for each one.
 
 ### Input
 
