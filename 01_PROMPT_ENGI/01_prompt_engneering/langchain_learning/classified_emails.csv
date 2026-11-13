@@ -1,0 +1,21 @@
+id,body,category,confidence,reasoning
+1,"My invoice is wrong, please fix it.",Billing,9,"The issue pertains to a billing error, which falls into the Billing category."
+2,I need to update my payment method for the subscription.,Billing,8,"The request is related to updating payment information, which falls under billing."
+3,Please cancel my subscription immediately.,Other,7,The email is a request for subscription cancellation which does not fit into the specified categories.
+4,I haven't received my latest invoice. Can you send it to me?,Billing,8,"The user is inquiring about the receipt of an invoice, which relates to billing."
+5,The app crashes when I click Save. Please assist.,Technical,9,The issue described is a technical problem involving the app crashing during a specific action.
+6,I can't log into my account. It keeps showing an error message.,Billing,8,The user is experiencing login issues which could be related to a payment problem.
+7,The report generation feature is not working as expected.,Feature request,8,"The email mentions an issue with a feature's functionality, indicating a feature-related concern."
+8,The app keeps freezing when I try to open it.,Technical,8,The user's issue of the app freezing clearly indicates a technical problem with the application.
+9,Please add dark mode to the application.,Feature request,8,The request is for a new feature (dark mode) to be added to the application.
+10,Can we add custom fields to the project management tool?,Feature request,8,The email is a request for a new feature related to custom fields.
+11,I would like to request an integration with Slack.,Feature request,9,"The email is clearly a request for a new feature, specifically an integration with Slack."
+12,Could you improve the search function in the CRM?,Feature request,8,"The email is requesting an enhancement to an existing feature, which qualifies it as a feature request."
+13,My transaction history is not showing up in the account.,Other,5,The issue mentioned does not clearly fit into any of the provided categories and could be related to either technical problems or account settings.
+14,I forgot my password and need help resetting it.,Other,6,"The email is a request for help with resetting a password, which does not fall into the specified categories."
+15,Can you confirm if my payment went through?,Billing,8,"The user is inquiring about the status of their payment, indicating a billing concern."
+16,What is the status of my refund request?,Billing,7,"The inquiry is related to a refund request, which falls under billing issues."
+17,I am having trouble exporting data from the system.,Technical,8,The issue relates to a technical problem with data exporting functionality.
+18,Can you change the format of the report to PDF?,Feature request,9,"The email contains a request to change a report format, which qualifies as a feature request."
+19,I need help accessing the API.,Technical,8,"The request involves accessing the API, which is a technical issue."
+20,The recent subscription invoice is not correct. Please check.,Billing,7,"The issue relates to an incorrect invoice, which falls under billing rather than technical issues."
